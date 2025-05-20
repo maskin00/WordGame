@@ -1,4 +1,4 @@
-// game.js (обновлено: расширение .PNG для категории "Столицы")
+// game.js (обновлено: пути к картинкам городов, выравнивание скорости, сброс ввода при ошибке)
 class Particle {
     constructor(x, y) {
         this.x = x;
@@ -171,7 +171,7 @@ class Game {
     getImagePath(word) {
         if (this.currentTheme === 'cities') {
             const code = this.wordMapping.cities[word];
-            return code ? `images/capitals/${code.toUpperCase()}.PNG` : null; // Изменено на .PNG
+            return code ? `images/capitals/${code.toUpperCase()}.png` : null;
         } else if (this.currentTheme === 'footballers') {
             const code = this.wordMapping.footballers[word];
             return code ? `images/footballers/${code}.png` : null;
@@ -193,7 +193,7 @@ class Game {
         const x = minX + Math.random() * (maxX - minX);
 
         const word = new Word(wordText, x, imgSrc);
-        word.speed = 0.3;
+        word.speed = 0.3;  // единая скорость
         this.words.push(word);
     }
 
