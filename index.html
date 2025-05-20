@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра с словами</title>
+    <!-- добавили favicon, положите в корень проекта файл favicon.ico -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="score">Очки: 0 (Уровень 1)</div>
+    </div>
+    <div id="controls">
+        <select id="themeSelect">
+            <option value="cities">Столицы</option>
+            <option value="footballers">Футболисты</option>
+        </select>
+        <button id="startButton">Старт</button>
+        <button id="pauseButton">Пауза</button>
+        <button id="endButton">Завершение</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
